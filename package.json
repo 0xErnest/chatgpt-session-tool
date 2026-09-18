@@ -1,0 +1,22 @@
+{
+  "name": "chatgpt-session-tool",
+  "version": "1.0.0",
+  "description": "本地零依赖工具：粘贴一次 ChatGPT Session JSON，即可转登录态 Cookie、查询订阅、取消自动续费。凭证不出本机。",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "chatgpt",
+    "session",
+    "subscription",
+    "cookie",
+    "next-auth",
+    "zero-dependency"
+  ],
+  "license": "MIT"
+}

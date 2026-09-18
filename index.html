@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ChatGPT Session 工具</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <h1>ChatGPT Session 工具</h1>
+  <p class="sub">粘贴一次 Session，即可转登录态 Cookie、查询订阅、取消自动续费。凭证只在你本机使用。</p>
+
+  <div class="card">
+    <h2>Session JSON</h2>
+    <p class="desc">登录 chatgpt.com 后打开 <code>https://chatgpt.com/api/auth/session</code>，把整段返回的 JSON 粘到这里。</p>
+    <textarea id="sess" placeholder='{ "accessToken": "...", "sessionToken": "...", "user": {...}, "account": {...} }'></textarea>
+    <div class="status" id="sessStatus"></div>
+  </div>
+
+  <!-- ① Session → Cookie -->
+  <div class="card">
+    <h2>① 转登录态 Cookie（Cookie-Editor 格式）</h2>
+    <p class="desc">把 sessionToken 转成 <code>__Secure-next-auth.session-token</code>，可在浏览器 Cookie-Editor 里「Import」直接恢复登录态。</p>
+    <div class="row">
+      <button id="genCookie">生成 Cookie</button>
+      <button class="ghost" id="copyCookie" disabled>复制</button>
+      <button class="ghost" id="dlCookie" disabled>下载 .json</button>
+    </div>
+    <textarea id="cookieOut" style="margin-top:10px" placeholder="生成结果会出现在这里" readonly></textarea>
+  </div>
+
+  <!-- ② 查询 / 取消 -->
+  <div class="card">
+    <h2>② 查询订阅 / 取消自动续费</h2>
+    <p class="desc">查询套餐、到期日、续费状态、来源平台；再一键打开官方订阅管理页取消续费（权益保留到到期日，到期后不再扣款）。</p>
+    <div class="row">
+      <button id="query">查询订阅</button>
+      <button class="ghost" id="cancel" disabled>取消自动续费</button>
+    </div>
+    <div class="status" id="qStatus"></div>
+    <div id="qResult"></div>
+  </div>
+
+  <p class="sub" style="margin-top:24px">
+    说明：Session 等同临时登录钥匙，用完可在 ChatGPT「退出所有设备」收回。异地/自动化操作账号有触发风控的风险。
+  </p>
+</div>
+
+<script src="/app.js" defer></script>
+</body>
+</html>
