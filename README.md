@@ -1,18 +1,26 @@
+<div align="center">
+
 # ChatGPT Session 工具
+
+粘贴一次 ChatGPT Session，在本机转成登录 Cookie、查看订阅、取消自动续费。<br>
+零依赖，凭证留在你自己的电脑上。
 
 [English](README.en.md)
 
-[![星桥订阅](https://img.shields.io/badge/%E8%B5%9E%E5%8A%A9-%E6%98%9F%E6%A1%A5%E8%AE%A2%E9%98%85-2563eb?style=flat-square)](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool)
+<sub>Sponsors</sub>
 
-本地零依赖小工具：粘贴一次 ChatGPT 的 Session JSON，即可转成登录 Cookie、查看订阅、打开官方页面取消自动续费。凭证留在你自己的电脑上。
+<a href="https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/img/sponsor-xingqiao-dark.png"><img src="docs/img/sponsor-xingqiao.png" width="240" alt="星桥订阅"></picture></a>
 
-## 由星桥订阅赞助
+星桥订阅把 ChatGPT 与 Claude 开通到你本人的账号。人民币标价，微信、支付宝都能付，聊天记录留在你的账号里。<br>
+已服务 290+ 位用户，可开电子普通发票。提交 Session 之前，用这个本地工具先看清邮箱、套餐和自动续费。
 
-你要给自己的 ChatGPT 开通订阅。[星桥订阅](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool) 用 Session 完成这一次开通，账号密码留在你自己手里。登录 chatgpt.com，打开 `/api/auth/session`，复制整页 JSON。这段文字就是当前的登录状态。提交之前，先在自己的电脑上看清：邮箱是哪一个、现在什么套餐、哪一天到期、自动续费开着没有。
+<br>
 
-这个仓库就是那个本地页面。`node server.js`，浏览器打开 `127.0.0.1`，粘贴，看完再决定要不要继续。Cookie 转换不离开浏览器，服务默认只听本机。星桥赞助这个仓库，用来把这一步留在公开、可以自己跑起来的代码里。
+<a href="https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool"><img src="docs/img/xingqiao-home.jpg" width="900" alt="星桥订阅首页：ChatGPT Plus / Claude Pro 代充，充到你自己的账号，数据始终归你。"></a>
 
-星桥把 ChatGPT 与 Claude 开通到你本人的账号。人民币标价，微信、支付宝付款，聊天记录留在你的账号里。已服务 290+ 位用户，可开电子普通发票。[看套餐与开通步骤](#sponsor)
+**[打开星桥订阅](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool)** &nbsp;·&nbsp; **[套餐](#套餐)**
+
+</div>
 
 ## 这个工具能做什么
 
@@ -77,15 +85,11 @@ https://chatgpt.com/api/auth/session
 - 免费账号调 `/subscriptions` 常返回 404，属正常现象。
 - 上游字段可能漂移，代码全部做了可选读取 + 保底值，随官方 API 变化可能需小幅适配。
 
-<a id="sponsor"></a>
+## 套餐
 
-## 赞助：星桥订阅
-
-[星桥订阅](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool) 把 ChatGPT 与 Claude 开通到你本人的账号。人民币标价，微信、支付宝都能付，聊天记录留在你的账号里。只给本人账号开通。已服务 290+ 位用户，可开电子普通发票，方便报销。
+只给本人账号开通。价格以 [xingqiaosub.com](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool) 当页为准。
 
 日常写东西、查资料、做图，选 ChatGPT Plus。想让 Claude 直接改代码、跑脚本，选 Claude Pro。用量不够再升级。
-
-### 套餐
 
 | 套餐 | 星桥价 | 官网标价 |
 | --- | --- | --- |
@@ -95,7 +99,7 @@ https://chatgpt.com/api/auth/session
 | Claude Pro | ¥299 起 | $20 / 月 |
 | Claude Max / Ultra | ¥999 起 | $100 / 月 |
 
-价格以 [xingqiaosub.com](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool) 当页为准。个人用户按月开通。Codex、ChatGPT Work 的套餐额度用完后，可加购 ChatGPT Credits，500 点 ¥199 起，购买后 12 个月内有效；账号需正在订阅 Plus 或 Pro。5 人以上可邮件 [support@xingqiaosub.com](mailto:support@xingqiaosub.com) 咨询团队价。
+个人用户按月开通。Codex、ChatGPT Work 的套餐额度用完后，可加购 ChatGPT Credits，500 点 ¥199 起，购买后 12 个月内有效；账号需正在订阅 Plus 或 Pro。5 人以上可邮件 [support@xingqiaosub.com](mailto:support@xingqiaosub.com) 咨询团队价。
 
 免费账号可以开通页面上的 ChatGPT 或 Claude 套餐。ChatGPT Plus 或更低档 Pro 可以升到更高档 Pro；在星桥开通的 Claude Pro 可以升到 Max 或 Ultra。升级按新套餐全价付款，之前已付的金额不退不抵，30 天从升级当天重算。
 

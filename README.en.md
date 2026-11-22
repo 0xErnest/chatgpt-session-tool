@@ -1,18 +1,26 @@
+<div align="center">
+
 # ChatGPT Session Tool
+
+Paste a ChatGPT Session once to make a login cookie, look up the subscription, or cancel auto-renew.<br>
+Zero dependencies. The credential stays on your machine.
 
 [简体中文](README.md)
 
-[![Xingqiao Subscription](https://img.shields.io/badge/Sponsored%20by-Xingqiao-2563eb?style=flat-square)](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool)
+<sub>Sponsors</sub>
 
-A local, zero-dependency tool. Paste a ChatGPT Session JSON once to turn it into a login cookie, look up the subscription, or open the official page to cancel auto-renew. The credential stays on your machine.
+<a href="https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/img/sponsor-xingqiao-dark.png"><img src="docs/img/sponsor-xingqiao.png" width="240" alt="星桥订阅 Xingqiao"></picture></a>
 
-## Sponsored by Xingqiao
+Xingqiao activates ChatGPT and Claude on your own account. Prices are in RMB. Pay with WeChat or Alipay, and your chats stay on your account.<br>
+290+ people have used it, and invoices are available. Before you submit a Session, this tool shows the email, the plan, and auto-renew.
 
-You want ChatGPT on your own account. [Xingqiao Subscription](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool) (星桥订阅) finishes that order with a Session, and the password stays with you. Sign in at chatgpt.com, open `/api/auth/session`, and copy the whole JSON. That text is the current login. Before you hand it over, read it on your own computer: which email, which plan, which expiry date, and whether auto-renew is on.
+<br>
 
-This repo is that local page. Run `node server.js`, open `127.0.0.1`, paste, and decide afterwards. Cookie conversion never leaves the browser. The server listens on localhost unless you change it. Xingqiao sponsors the repo so this step stays in code you can run yourself.
+<a href="https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool"><img src="docs/img/xingqiao-home.jpg" width="900" alt="Xingqiao homepage: ChatGPT Plus / Claude Pro, activated on your own account."></a>
 
-Xingqiao activates ChatGPT and Claude on your own account. Prices are in RMB. Pay with WeChat or Alipay, and your chats stay on your account. 290+ people have used the service, and electronic invoices are available. [Plans and how to order](#sponsor)
+**[Open Xingqiao](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool)** &nbsp;·&nbsp; **[Plans](#plans)**
+
+</div>
 
 ## What this tool does
 
@@ -77,15 +85,11 @@ Browser (index.html)  ──►  local proxy (server.js, 127.0.0.1)  ──►  
 - Free accounts often get 404 from `/subscriptions`. That is expected.
 - Upstream fields move. The code reads them optionally and keeps fallbacks. Small updates may be needed when the official API changes.
 
-<a id="sponsor"></a>
+## Plans
 
-## Sponsor: Xingqiao Subscription
-
-[Xingqiao](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool) activates ChatGPT and Claude on your own account. Prices are in RMB. Pay with WeChat or Alipay, and your chats stay on your account. Activation is for your own login. 290+ people have used the service. Electronic invoices are available for reimbursement.
+Activation is for your own login. Live prices are on [xingqiaosub.com](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool).
 
 ChatGPT Plus covers everyday writing, research, and images. Claude Pro fits when you want Claude to edit code and run scripts. Move up a tier when you outgrow the plan.
-
-### Plans
 
 | Plan | Xingqiao | Official list price |
 | --- | --- | --- |
@@ -95,7 +99,7 @@ ChatGPT Plus covers everyday writing, research, and images. Claude Pro fits when
 | Claude Pro | from ¥299 | $20 / month |
 | Claude Max / Ultra | from ¥999 | $100 / month |
 
-Live prices are on [xingqiaosub.com](https://xingqiaosub.com/?utm_source=github&utm_medium=readme&utm_campaign=chatgpt-session-tool). Individual orders are monthly. After the included Codex or ChatGPT Work allowance runs out, add ChatGPT Credits: 500 credits from ¥199, valid for 12 months, on an account that already has Plus or Pro. Teams of 5 or more can email [support@xingqiaosub.com](mailto:support@xingqiaosub.com) for team pricing.
+Individual orders are monthly. After the included Codex or ChatGPT Work allowance runs out, add ChatGPT Credits: 500 credits from ¥199, valid for 12 months, on an account that already has Plus or Pro. Teams of 5 or more can email [support@xingqiaosub.com](mailto:support@xingqiaosub.com) for team pricing.
 
 A free account can open any ChatGPT or Claude plan listed on the site. ChatGPT Plus, or a lower Pro tier, can move up to a higher Pro tier. Claude Pro opened through Xingqiao can move up to Max or Ultra. An upgrade is charged at the full price of the new plan. The amount already paid is not refunded or credited, and a new 30-day period starts on the upgrade date.
 
